@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Website The Roblox Group Indonesia</title>
+  <link rel="icon" href="c:\Users\Hafidz Rifqly\Pictures\image the roblox.jpg" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: hsl(244, 96%, 50%);
+      text-align: center;
+      background-image: url("backround.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header, nav, footer {
+      background-color: #01ff4d66;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav a.btn-sosmed {
+      display: inline-block;
+      padding: 10px 22px;
+      background: linear-gradient(135deg, #ff3c3c, #ff9500);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(255, 149, 0, 0.4);
+      transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+      font-size: 16px;
+    }
+
+    nav a.btn-sosmed:hover,
+    nav a.btn-sosmed:focus {
+      background: linear-gradient(135deg, #ff9500, #ff3c3c);
+      box-shadow: 0 6px 12px rgba(255, 60, 60, 0.6);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    video {
+      margin: 20px auto;
+      display: block;
+      max-width: 90%;
+      height: auto;
+      border: 2px solid rgb(79, 8, 245);
+    }
+
+    .top-right-controls {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .top-right-controls select,
+    .top-right-controls button {
+      padding: 6px 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .dark-mode {
+      background-color: #1a1a1a;
+      color: #f1f1f1;
+      background-image: none;
+    }
+
+    .dark-mode header,
+    .dark-mode nav,
+    .dark-mode footer {
+      background-color: #333333aa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fitur Bahasa & Tema -->
+  <div class="top-right-controls">
+    <select id="languageSelect" onchange="changeLanguage()">
+      <option value="id">Bahasa Indonesia</option>
+      <option value="en">English</option>
+    </select>
+    <button onclick="toggleTheme()">🌓 Tema</button>
+  </div>
+
+  <header>
+    <h1 id="mainTitle">Selamat Datang di Website The Roblox Group Indonesia</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="https://www.tiktok.com/@the_roblox_group67" class="btn-sosmed" target="_blank" rel="noopener noreferrer" id="social1">Sosmed Pertama Kami</a></li>
+      <li><a href="https://youtube.com/@the_roblox_group" class="btn-sosmed" target="_blank" rel="noopener noreferrer" id="social2">Sosmed Kedua Kami</a></li>
+      <li><a href="https://chat.whatsapp.com/Ex1WItJZkQ824IfTCt8d3y?mode=ac_t" class="btn-sosmed" target="_blank" rel="noopener noreferrer" id="group">Grup Kami</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="videoTitle">Video-Video Kami</h2>
+
+  <video controls>
+    <source src="c:\Users\Hafidz Rifqly\Videos\video.mp4" />
+  </video>
+
+  <video controls>
+    <source src="c:\Users\Hafidz Rifqly\Videos\video kami.mp4" />
+  </video>
+
+  <h3 data-key="adminIntro1">perkenalkan nama nama admin the roblox</h3>
+
+  <p data-key="admin1">admin pertama yaitu Rif dia adalah admin sekaligus ketua the roblox dia membuat the roblox</p>
+  <img src="c:\Users\Hafidz Rifqly\Pictures\WhatsApp Image 2025-07-24 at 19.30.50_b2f19b81.jpg" alt="foto admin pertama" style="width: 250px; height: 250px;">
+
+  <p data-key="admin2">admin kedua yaitu raifa dia adalah menemani awal proses the roblox dibangun</p>
+  <img src="c:\Users\Hafidz Rifqly\Pictures\image3.jpg" alt="foto admin kedua" style="width: 150px; height: 250px;">
+
+  <p data-key="admin3">admin ketiga the roblox adalah nakila</p>
+  <img src="c:\Users\Hafidz Rifqly\Pictures\image5.jpg" alt="foto admin ketiga" style="width: 250px; height: 250px;">
+
+  <p data-key="admin4">admin keempat admin terakhir yang ada di the roblox yaitu namanya adalah racka</p>
+  <img src="c:\Users\Hafidz Rifqly\Pictures\image4.jpg" alt="foto admin keempat" style="width: 150px; height: 250px;">
+
+  <footer>
+    <p id="footerText">© 2025 dibuat oleh programmer The Roblox Group Indonesia. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const translations = {
+      id: {
+        mainTitle: "Selamat Datang di Website The Roblox Group Indonesia",
+        social1: "Sosmed Pertama Kami",
+        social2: "Sosmed Kedua Kami",
+        group: "Grup Kami",
+        videoTitle: "Video-Video Kami",
+        footerText: "© 2025 dibuat oleh programmer The Roblox Group Indonesia. All rights reserved.",
+        adminIntro1: "perkenalkan nama nama admin the roblox",
+        admin1: "admin pertama yaitu Rif dia adalah admin sekaligus ketua the roblox dia membuat the roblox",
+        admin2: "admin kedua yaitu raifa dia adalah menemani awal proses the roblox dibangun",
+        admin3: "admin ketiga the roblox adalah nakila",
+        admin4: "admin keempat admin terakhir yang ada di the roblox yaitu namanya adalah racka"
+      },
+      en: {
+        mainTitle: "Welcome to The Roblox Group Indonesia Website",
+        social1: "Our First Social Media",
+        social2: "Our Second Social Media",
+        group: "Our Group",
+        videoTitle: "Our Videos",
+        footerText: "© 2025 created by The Roblox Group Indonesia programmers. All rights reserved.",
+        adminIntro1: "Introducing the admins of The Roblox",
+        admin1: "The first admin is Rif, the leader and founder of The Roblox.",
+        admin2: "The second admin Raifa,he accompanied the initiak process of building Roblox",
+        admin3: "The third admin of The Roblox is Nakila.",
+        admin4: "The fourth and final admin of The Roblox is Racka."
+      }
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById("languageSelect").value;
+      const texts = translations[lang];
+
+      for (const key in texts) {
+        const elById = document.getElementById(key);
+        const elByDataKey = document.querySelector(`[data-key="${key}"]`);
+        if (elById) elById.textContent = texts[key];
+        if (elByDataKey) elByDataKey.textContent = texts[key];
+      }
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    // Auto set ke English saat pertama kali load
+    window.onload = () => {
+      document.getElementById("languageSelect").value = "en";
+      changeLanguage();
+    };
+  </script>
+</body>
+</html>
